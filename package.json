@@ -2,7 +2,7 @@
     "name": "workspace-root",
     "private": true,
     "workspaces": {
-        "packages": ["app-mobile"]
+        "packages": ["app-mobile", "packages/*"]
     },
     "scripts": {
         "android": "yarn workspace app-mobile android",
