@@ -1,0 +1,16 @@
+{
+    "name": "generate-report-flow",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "main": "src/index.ts",
+    "scripts": {
+        "build": "babel src/ -d lib/",
+        "start": "node lib/main.js"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.18.2",
+        "@babel/preset-flow": "^7.17.12"
+    }
+}
