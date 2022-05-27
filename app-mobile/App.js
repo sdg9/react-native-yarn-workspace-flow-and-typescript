@@ -26,6 +26,12 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {hello} from 'util-hello-world';
+import {hello as helloTS} from 'util-hello-world-ts';
+
+console.log('Hello: ', hello());
+console.log('Hello TS: ', helloTS());
+
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
