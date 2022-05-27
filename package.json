@@ -5,10 +5,10 @@
         "packages": ["app-mobile"]
     },
     "scripts": {
+        "android": "yarn workspace app-mobile android",
         "start": "yarn workspace app-mobile start",
         "flow": "yarn workspace app-mobile flow",
         "test": "yarn workspace app-mobile test",
-        "lint": "yarn workspace app-mobile lint",
-        "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+        "lint": "yarn workspace app-mobile lint"
     }
 }
