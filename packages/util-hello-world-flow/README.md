@@ -1,0 +1,1 @@
+Makes app-mobile happy as index.js uses //@flow

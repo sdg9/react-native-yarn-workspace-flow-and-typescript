@@ -1,0 +1,12 @@
+{
+    "name": "util-hello-world-ts-compiled",
+    "version": "0.1.0",
+    "private": true,
+    "main": "dist/index.js",
+    "scripts": {
+        "tsc": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^4.7.2"
+    }
+}

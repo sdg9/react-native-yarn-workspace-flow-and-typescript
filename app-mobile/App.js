@@ -18,45 +18,16 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
+// Flow compatible
 import {hello} from 'util-hello-world';
+import {hello as helloFlow} from 'util-hello-world-flow';
+import {hello as helloTSCompiled} from 'util-hello-world-ts-compiled';
+
+// No Flow
+import {hello as helloNoFlow} from 'util-hello-world-no-flow';
 import {hello as helloTS} from 'util-hello-world-ts';
-
-console.log('Hello: ', hello());
-console.log('Hello TS: ', helloTS());
-
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -76,20 +47,15 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <Text>Flow happy imports</Text>
+          <Text>Hello: {hello()}</Text>
+          <Text>Hello Flow: {helloFlow()}</Text>
+          <Text>Hello TS Compiled: {helloTSCompiled()}</Text>
+          <View style={styles.buffer}>
+            <Text>Flow error imports</Text>
+            <Text>Hello TS: {helloTS()}</Text>
+            <Text>Hello No Flow: {helloNoFlow()}</Text>
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -97,6 +63,9 @@ const App: () => Node = () => {
 };
 
 const styles = StyleSheet.create({
+  buffer: {
+    paddingTop: 10,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,

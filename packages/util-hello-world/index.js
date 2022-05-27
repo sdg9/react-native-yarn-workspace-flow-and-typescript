@@ -1,4 +1,3 @@
-//@flow
 export const hello = () => {
-  return "hello world";
+  return "hello world (flow declaration)";
 };
