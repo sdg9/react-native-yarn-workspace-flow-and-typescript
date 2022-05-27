@@ -15,3 +15,13 @@ Initially there were flow errors importing packages but here are the various way
 - util-hello-world-ts-compiled
   - Compile the source so that I export a .js file, then it's essentially the same as util-hello-world.
   - Downside is every code change you must compile, then potentially re-create the .flow file
+
+
+## Potential issues
+Getting import type declarations can only be used in TypeScript files?
+See https://stackoverflow.com/a/50385231
+
+- Install Flow Language Support
+- Open workspace settings and add `"javascript.validate.enable": false`
+- https://github.com/flow/flow-for-vscode#setup
+- As of now I don't know a good way to enable typescript on a worksapce and flow on another within the same project
