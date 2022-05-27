@@ -1,12 +1,14 @@
 {
-    "name": "util-hello-world-ts",
+    "name": "generate-report",
     "version": "0.1.0",
     "private": true,
     "main": "src/index.ts",
     "scripts": {
+        "start": "ts-node src/main.ts",
         "tsc": "tsc"
     },
     "peerDependencies": {
-        "typescript": "*"
+        "typescript": "*",
+        "ts-node": "*"
     }
 }
